@@ -1,10 +1,14 @@
 # All
 *.iml
+.idea
 /logs
 /target/
-/screenshots/*
-/.allure
 /build
+
+# Tests
+/.allure
+allure-results
+/screenshots/*
 
 # Ignore Gradle project-specific cache directory
 .gradle
