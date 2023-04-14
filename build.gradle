@@ -9,6 +9,8 @@ repositories {
     mavenCentral()
 }
 
+def allureVersion = "2.19.0"
+
 dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
@@ -21,6 +23,17 @@ dependencies {
             // common
             'io.github.cdimascio:dotenv-java:2.3.2',
             'org.projectlombok:lombok:1.18.24',
+
+            // rest && json
+            'io.rest-assured:rest-assured:5.2.0',
+            'com.googlecode.json-simple:json-simple:1.1.1',
+            'com.fasterxml.jackson.core:jackson-annotations:2.13.3',
+            'com.fasterxml.jackson.core:jackson-databind:2.13.3',
+
+            // allure
+            "io.qameta.allure:allure-rest-assured:$allureVersion",
+
+
     )
 }
 
