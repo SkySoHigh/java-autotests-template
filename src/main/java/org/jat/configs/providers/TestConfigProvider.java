@@ -2,6 +2,7 @@ package org.jat.configs.providers;
 
 import io.github.cdimascio.dotenv.Dotenv;
 import lombok.Getter;
+import org.jat.web.browsers.BrowserEnum;
 
 public class TestConfigProvider {
     public static final Dotenv dotenv = Dotenv.load();
@@ -19,6 +20,7 @@ public class TestConfigProvider {
 
     public static class SelenoidProperties {
 
+        @Getter
         private static final boolean selenoidEnabled = Boolean.parseBoolean(dotenv.get("selenoid.enabled", "false"));
         @Getter
         private static final boolean recordEnabled = Boolean.parseBoolean(dotenv.get("selenoid.recordEnabled", "false"));
@@ -36,7 +38,7 @@ public class TestConfigProvider {
         @Getter
         private static final String downloadsFolder = dotenv.get("browser.downloadsFolder", "build/downloads");
         @Getter
-        private static final String name = dotenv.get("browser.name", "CHROME106");
+        private static final BrowserEnum browser = BrowserEnum.parse(dotenv.get("browser.name", "CHROME112"));
     }
 
     public static class YoutrackProperties {

@@ -24,6 +24,10 @@ dependencies {
             'io.github.cdimascio:dotenv-java:2.3.2',
             'org.projectlombok:lombok:1.18.24',
 
+            // web
+            'com.codeborne:selenide:6.7.4',
+            'org.selenide:selenide-selenoid:2.2.4',
+
             // rest && json
             'io.rest-assured:rest-assured:5.2.0',
             'com.googlecode.json-simple:json-simple:1.1.1',
@@ -32,6 +36,7 @@ dependencies {
 
             // allure
             "io.qameta.allure:allure-rest-assured:$allureVersion",
+            "io.qameta.allure:allure-selenide:$allureVersion",
 
 
     )
